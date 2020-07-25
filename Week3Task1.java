@@ -1,11 +1,11 @@
 public class Week3Task1 {
-    public static int gcd(int num1, int num2) {
-        while(num1 != num2) {
-            if(num1 > num2) {
-                num1 = num1 - num2;
+    public static int gcd(int a, int b) {
+        while(a != b) {
+            if(a > b) {
+                a = a - b;
             }
             else {
-                num2 = num2 - num1;
+                b = b - a;
             }
         }
          return num1;
@@ -21,7 +21,7 @@ public class Week3Task1 {
         return arr[n];
     }
 
-    public static void primes(int n) {
+    public static void sieveEratosthenes(int n) {
         int [] a = new int[n+2];
         for(int i=1 ; i <= n; i++) a[i] = 1;
         a[0] = 0; a[1] = 0;
